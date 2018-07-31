@@ -7,6 +7,7 @@
     "lint": "eslint app",
     "build": "webpack --mode production --config webpack.prod.js",
     "dev": "webpack-dev-server --config webpack.dev.js --mode development",
+    "start": "webpack-dev-server --config webpack.dev.js --mode development",
     "test": "jest"
   },
   "author": "Chuck Bergeron",
