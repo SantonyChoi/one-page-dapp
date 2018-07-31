@@ -8,6 +8,11 @@ var mnemonic = process.env.HDWALLET_MNEMONIC
 
 module.exports = {
   networks: {
+    development: {
+      host: '127.0.0.1',
+      port: 8545,
+      network_id: '*' // Match any network id
+    },
     ropsten: {
       provider: new HDWalletProvider(mnemonic, process.env.ROPSTEN_PROVIDER_URL),
       network_id: 3,
@@ -19,11 +24,6 @@ module.exports = {
       network_id: 4,
       gas: 4612388,
       gasPrice: 100000000000
-    },
-    development: {
-      host: '127.0.0.1',
-      port: 7545,
-      network_id: 1234 // Match any network id
     }
   }
 }
